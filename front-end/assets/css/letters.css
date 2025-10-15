@@ -1,0 +1,61 @@
+#ContainerPicturesWrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    /* topo | direita | inferior | esquerda */
+    margin: 170px auto 0px auto;
+    position: relative;
+}
+
+#ContainerPictures {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.pictures.destaque {
+    margin: 0px 0px 0px;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.pictures {
+    /*A largura da pictures é 40% da largura da tela*/
+    /*A altura da pictures é 1.2x da largura da pictures*/
+    background-color: #D9D9D9;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transform: scale(0.75);
+}
+
+.pictures h3 {
+    color: #b30000;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Playfair", serif;
+}
+
+.foto {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: red;
+}
+
+.space {
+    /*width é 40% do tamanho da pictures*/
+    background-color: transparent;
+}
+
+.LetterButtons {
+    display: hidden;
+    visibility: hidden;
+}
