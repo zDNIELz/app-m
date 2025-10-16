@@ -1,0 +1,92 @@
+/* -------- reset.css (moderno) -------- */
+
+/* 1) Box sizing consistente */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2) Zera margens e corrige tipografia base */
+* {
+  margin: 0;
+}
+:root {
+  color-scheme: light dark;            /* ajuda em dark mode nativo */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html {
+  hanging-punctuation: first last;
+  text-wrap: pretty;                   /* navegadores modernos */
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 3) Mídia e elementos embutidos */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4) Listas sem estilo por padrão (reaplique onde precisar) */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* 5) Inputs e botões herdando tipografia */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+/* 6) Botões “neutros” por padrão */
+button, [type="button"], [type="submit"], [type="reset"] {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 7) Links neutros (decoração no hover para acessibilidade) */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 8) Tabelas básicas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 9) Textarea redimensionável apenas verticalmente */
+textarea {
+  resize: vertical;
+}
+
+/* 10) Foco visível e consistente */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 11) Respeita redução de movimento do usuário */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

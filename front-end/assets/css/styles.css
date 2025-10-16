@@ -1,0 +1,7 @@
+body {
+    background-color: var(--bg-dark);
+    color: var(--txt-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+}
